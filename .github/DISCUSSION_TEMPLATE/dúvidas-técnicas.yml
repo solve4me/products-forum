@@ -1,0 +1,114 @@
+title: "[DÚVIDA TÉCNICA]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ❓ Fórum de Dúvidas Técnicas
+        Travou em alguma implementação, tem dúvidas sobre arquitetura do sistema ou precisa de uma segunda opinião sobre código e infra? Preencha os campos abaixo com o máximo de contexto (e logs!) para que o time possa te ajudar mais rápido. 🛠️
+
+  - type: dropdown
+    id: produto
+    attributes:
+      label: 📦 Produto / Módulo
+      description: "A qual produto ou módulo essa dúvida está relacionada?"
+      options:
+        - Mobile4ME
+        - Router4ME
+        - DB4ME
+        - Report4ME
+        - Tag4ME
+    validations:
+      required: true
+
+  - type: dropdown
+    id: categoria-duvida
+    attributes:
+      label: 📌 Categoria da Dúvida
+      description: "Qual é a natureza técnica do seu questionamento?"
+      options:
+        - 🏗️ Arquitetura / System Design
+        - 💻 Código / Lógica / Implementação
+        - ⚙️ Infraestrutura / DevOps / Deploy
+        - 🔌 Integração / APIs / Webhooks
+        - 🗄️ Banco de Dados / Queries / Performance
+        - 🧩 Outra categoria
+    validations:
+      required: true
+
+  - type: textarea
+    id: contexto-objetivo
+    attributes:
+      label: 🎯 Contexto e Objetivo
+      description: "O que você está tentando construir ou resolver em um nível mais alto? Qual é o cenário?"
+      placeholder: "Ex: Estou desenvolvendo o endpoint de envio de mensagens no Router4ME e preciso que ele suporte alta concorrência..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: detalhamento-duvida
+    attributes:
+      label: ❓ A Dúvida ou Bloqueio
+      description: "Descreva exatamente onde você travou ou qual é o comportamento inesperado."
+      placeholder: "Ex: Não tenho certeza de qual pattern aplicar aqui. OU O serviço está retornando timeout após 30 segundos..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: tentativas-solucao
+    attributes:
+      label: 🛠️ O que você já tentou?
+      description: "Compartilhe as abordagens que você já testou para evitar que as pessoas sugiram o que não funcionou."
+      placeholder: "Ex: Já tentei aumentar o timeout no ingress do Kubernetes, mas o erro persiste. Também verifiquei se o banco estava travando a requisição..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tipo-proposta
+    attributes:
+      label: 📌 Tipo de Proposta
+      description: "Qual é o foco principal desta discussão?"
+      options:
+        - 🌟 Nova Funcionalidade
+        - 🚀 Melhoria de Funcionalidade Existente
+        - ⚡ Melhoria de Performance / Escalabilidade
+        - 🛠️ Refatoração / Pagamento de Dívida Técnica
+        - 🔒 Requisito de Segurança / Compliance
+        - 🧩 Outra abordagem
+    validations:
+      required: true
+
+  - type: textarea
+    id: contexto-problema
+    attributes:
+      label: 🎯 Contexto e Problema
+      description: "O que motivou essa ideia? Compartilhe o cenário atual, as dores dos usuários ou as limitações técnicas que estamos enfrentando."
+      placeholder: "Ex: Atualmente, o processo X é manual e gera gargalos, ou o sistema apresenta lentidão no cenário Y..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solucao-proposta
+    attributes:
+      label: 🛠️ Proposta de Solução
+      description: "Como você imagina a solução ideal? Traga sua visão técnica ou de negócio. Não precisa ser um design final, a ideia é iniciar o debate."
+      placeholder: "Minha sugestão é implementar/modificar..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidencias-logs
+    attributes:
+      label: 💻 Logs, Erros e Trechos de Código
+      description: "Cole aqui as evidências técnicas. Lembre-se de higienizar dados sensíveis (senhas, tokens, nomes de clientes)."
+    validations:
+      required: false
+
+  - type: textarea
+    id: referencias
+    attributes:
+      label: 📎 Referências, Links e Anexos
+      description: "Links de documentações oficiais, tópicos do StackOverflow, PRs relacionados ou diagramas de arquitetura."
+      placeholder: "Cole links, imagens ou referências aqui."
+    validations:
+      required: false

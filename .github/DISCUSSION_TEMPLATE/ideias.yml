@@ -1,0 +1,95 @@
+title: "[IDEIA]: "
+labels: ["idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 💡 Bem-vindo ao Portal de Ideias!
+        Compartilhe sua visão preenchendo os campos abaixo. O objetivo aqui é gerar discussão, alinhar expectativas e avaliar em conjunto o impacto da sua proposta! 🚀
+
+  - type: dropdown
+    id: produto
+    attributes:
+      label: 📦 Produto / Módulo
+      description: "Em qual produto, módulo ou área essa ideia se aplica?"
+      options:
+        - Mobile4ME
+        - Router4ME
+        - DB4ME
+        - Report4ME
+        - Tag4ME
+        - Novo Produto
+    validations:
+      required: true
+
+  - type: dropdown
+    id: tipo-proposta
+    attributes:
+      label: 📌 Tipo de Proposta
+      description: "Qual é o foco principal desta discussão?"
+      options:
+        - 🌟 Nova Funcionalidade
+        - 🚀 Melhoria de Funcionalidade Existente
+        - ⚡ Melhoria de Performance / Escalabilidade
+        - 🛠️ Refatoração / Pagamento de Dívida Técnica
+        - 🔒 Requisito de Segurança / Compliance
+        - 🧩 Outra abordagem
+    validations:
+      required: true
+
+  - type: textarea
+    id: contexto-problema
+    attributes:
+      label: 🎯 Contexto e Problema
+      description: "O que motivou essa ideia? Compartilhe o cenário atual, as dores dos usuários ou as limitações técnicas que estamos enfrentando."
+      placeholder: "Ex: Atualmente, o processo X é manual e gera gargalos, ou o sistema apresenta lentidão no cenário Y..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solucao-proposta
+    attributes:
+      label: 🛠️ Proposta de Solução
+      description: "Como você imagina a solução ideal? Traga sua visão técnica ou de negócio. Não precisa ser um design final, a ideia é iniciar o debate."
+      placeholder: "Minha sugestão é implementar/modificar..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: casos-uso
+    attributes:
+      label: 👤 Casos de Uso na Prática
+      description: "Para ajudar a comunidade a visualizar, descreva como os usuários interagiram com essa ideia. Fique à vontade para usar o formato Ágil."
+      value: |
+        - **Como** [papel/persona/sistema]
+        - **Quero** [desejo/funcionalidade/ação]
+        - **Para** [objetivo/benefício alcançado]
+    validations:
+      required: true
+
+  - type: textarea
+    id: impacto-clientes
+    attributes:
+      label: 📈 Impacto Esperado e Valor Gerado
+      description: "Quais são os ganhos projetados? Isso atende alguma demanda reprimida de clientes, melhora métricas de conversão, ou reduz custos de infraestrutura/operação?"
+      placeholder: "Ex: Potencial para reduzir chamados no suporte em 30%; Agiliza o tempo de resposta da API."
+    validations:
+      required: false
+
+  - type: textarea
+    id: engajamento-comunidade
+    attributes:
+      label: ❓ Perguntas em Aberto para a Comunidade
+      description: "Quais pontos você ainda tem dúvida ou gostaria que outros engenheiros, PMs ou designers ajudassem a responder nesta discussão?"
+      placeholder: "Ex: Qual seria o melhor banco de dados para isso? Como isso impacta a jornada do usuário no app mobile?"
+    validations:
+      required: false
+
+  - type: textarea
+    id: referencias
+    attributes:
+      label: 📎 Referências, Links e Anexos
+      description: "Adicione links que enriqueçam o debate: documentações de mercado, exemplos de concorrentes, rascunhos no Miro/Figma, ou threads anteriores."
+      placeholder: "Cole links, imagens ou referências aqui."
+    validations:
+      required: false
